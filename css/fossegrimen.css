@@ -1,0 +1,10 @@
+.title{
+	background-color: cadetblue;
+	height: 450px;
+}
+
+.title > div {
+	margin-top: 170px;
+	color: white;
+}
+
