@@ -8,3 +8,14 @@
 	color: white;
 }
 
+.isRecording{
+	background-color: #d9534f;
+}
+
+.isNotRecording{
+	background-color: #6D9933;
+}
+
+.fa-microphone{
+	color: white;
+}

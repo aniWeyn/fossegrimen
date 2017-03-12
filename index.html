@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="norskGramatik">
+<html ng-app="fossegrimen">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,25 +16,26 @@
 		<div class="col-md-12">
 			<div class="row title">
 				<div class="col-md-offset-4">
-				<h1>Fossegrimen</h1>
-				<hr>
-				<h4>Lå Fossegrimen hjelpe deg å lære norsk språk</h4>
+					<h1>Fossegrimen</h1>
+					<hr>
+					<h4>Lå Fossegrimen hjelpe deg å lære norsk språk</h4>
 				</div>
 			</div>
-			<div>
-			<h1></h1>
-				<div class="input-group">
-  					<input type="text" class="form-control" aria-label="...">
-  				<div class="input-group-btn">
-    				<a class="btn btn-default" href="#">
-						<i class="fa fa-microphone"></i>
-					</a>
-					<a class="btn btn-default" href="#">
-					<i class="fa fa-microphone-slash"></i>
-					</a>
-  				</div>
+			<div ng-controller='SpeechInputController'>
+				<h1></h1>
+					<div class="input-group">
+  						<input type="text" class="form-control" aria-label="...">
+  							<div class="input-group-btn" >
+    							<a 
+									type="button" class="btn" 
+									ng-class="{true: 'isRecording', false: 'isNotRecording'}[isActive]" 
+									ng-click="toggleActive()"
+									>
+									<i class="fa fa-microphone"></i>
+								</a>
+  							</div>
+					</div>
 			</div>
-		</div>
 		</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
